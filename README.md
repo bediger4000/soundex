@@ -35,4 +35,32 @@ Implement Soundex.
 
 ## Analysis
 
+The algorithm outlined above seems to be based on
+[American Soundex](https://en.wikipedia.org/wiki/Soundex).
 
+American Soundex Rule #3:
+
+    If two or more letters with the same number are adjacent in the original
+    name (before step 1), only retain the first letter; also two letters
+    with the same number separated by 'h' or 'w' are coded as a single
+    number, whereas such letters separated by a vowel are coded twice. This
+    rule also applies to the first letter.
+
+gets replaced by
+
+	Remove consecutive consonants with the same sound (for example,
+    change ck -> c).
+
+Why? Wikipedia's Rule #3 is objectively easier to implement,
+"the same sound" doesn't really mean anything.
+ck &rarr; c, but does cks &rarr; cs &rarr; c?
+What about 'g' and 'j'?
+
+I'm going to guess that Grammarly was interested in finding out
+if or how candidates did the "sound alike" part.
+The rest of the work is pretty basic character-by-character
+examination of an input string.
+
+If you, the interviewer, aren't working for Grammarly,
+this is not a great question.
+You won't find anything out about the candidate's programming skills.
