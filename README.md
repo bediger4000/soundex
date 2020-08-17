@@ -19,12 +19,12 @@ Remove all vowels, including y, w, and h.
 
 Replace all consonants with the following digits:
 
-        b, f, p, v &rarr; 1
-        c, g, j, k, q, s, x, z &rarr; 2
-        d, t &rarr 3
-        l &rarr; 4
-        m, n &rarr; 5
-        r &rarr; 6
+        b, f, p, v -> 1
+        c, g, j, k, q, s, x, z -> 2
+        d, t -> 3
+        l -> 4
+        m, n -> 5
+        r -> 6
 
 If you don't have three numbers yet, append zeros until you do.
 Keep the first three numbers.
